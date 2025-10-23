@@ -1,10 +1,6 @@
-import multer from "multer";
+import multer from 'multer';
 
-export const upload = multer({
-  storage: multer.diskStorage({
-    destination: "uploads",
-    filename: (req, file, cb) => {
-      return cb(null, `${Date.now()}${file.originalname}`);
-    },
-  }),
-});
+// Use memoryStorage to keep the file as a buffer in req.file.buffer
+const storage = multer.memoryStorage();
+
+export const upload = multer({ storage: storage });
