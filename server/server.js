@@ -22,7 +22,7 @@ await connectDB();
 await connectCloudinary();
 
 // Allow multiple origins
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173", "https://grocerly-delta.vercel.app"];
 
 // Payment Confirmation using Webhook
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
