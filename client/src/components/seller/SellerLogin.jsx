@@ -57,7 +57,7 @@ const SellerLogin = () => {
               required
             />
           </div>
-          <button className="bg-orange-500/70 text-white w-full py-2 rounded-md cursor-pointer">
+          <button className="bg-orange-500/70 shadow-md text-white w-full hover:bg-orange-600/70 py-2 rounded-md cursor-pointer">
             Login
           </button>
         </div>

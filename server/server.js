@@ -22,7 +22,7 @@ await connectDB();
 await connectCloudinary();
 
 // Allow multiple origins
-const allowedOrigins = ["http://localhost:5173", "https://grocerly-delta.vercel.app"];
+const allowedOrigins = ["http://localhost:5173"]; // "https://grocerly-delta.vercel.app"
 
 // Payment Confirmation using Webhook
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
@@ -33,6 +33,7 @@ app.use(cookieParser());
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 app.get("/", (req, res) => res.send("API is working."));
+app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/seller", sellerRouter);
 app.use("/api/product", productRouter);

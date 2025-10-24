@@ -138,12 +138,12 @@ const ProductDetails = () => {
               {cartCount === 0 ? (
                 <button
                   onClick={() => addToCart(product._id)}
-                  className="w-full py-3.5 cursor-pointer font-medium bg-gray-100 text-gray-800/80 hover:bg-gray-200 transition rounded-xl"
+                  className="w-full py-3.5 shadow-md cursor-pointer font-medium bg-gray-100 text-gray-800/80 hover:bg-gray-200 transition rounded-xl"
                 >
                   Add to Cart
                 </button>
               ) : (
-                <div className="w-full py-3.5 flex flex-row items-center justify-center bg-gray-100 hover:bg-gray-200/70 transition rounded-xl cursor-pointer">
+                <div className="w-full py-3.5 flex shadow-md flex-row items-center justify-center bg-gray-100 hover:bg-gray-200/70 transition rounded-xl cursor-pointer">
                   {/* Minus Button */}
                   <button
                     onClick={() => {
@@ -187,7 +187,7 @@ const ProductDetails = () => {
                   }
                   navigate("/cart");
                 }}
-                className="w-full py-3.5 cursor-pointer font-medium bg-orange-500/70 text-white hover:bg-orange-600/70 transition rounded-xl"
+                className="w-full py-3.5 shadow-md cursor-pointer font-medium bg-orange-500/70 text-white hover:bg-orange-600/70 transition rounded-xl"
               >
                 Buy now
               </button>

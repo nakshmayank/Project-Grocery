@@ -41,8 +41,8 @@ const ProductList = () => {
             <tbody className="text-sm text-gray-500">
               {products.map((product) => (
                 <tr key={product._id} className="border-t border-gray-500/20">
-                  <td className="md:px-4 pl-2 md:pl-4 py-3 flex items-center space-x-3 truncate">
-                    <div className="border border-gray-300 rounded overflow-hidden">
+                  <td className="md:px-4 pl-2 gap-1 md:pl-4 py-3 flex items-center space-x-3 truncate">
+                    <div className="rounded overflow-hidden">
                       <img
                         src={product.images[0]}
                         alt="Product"
@@ -68,7 +68,7 @@ const ProductList = () => {
                         type="checkbox"
                         className="sr-only peer"
                       />
-                      <div className="w-12 h-7 bg-slate-300 rounded-full peer peer-checked:bg-orange-500/80 transition-colors duration-200"></div>
+                      <div className="w-12 h-7 shadow-md bg-slate-300 rounded-full peer peer-checked:bg-orange-500/80 transition-colors duration-200"></div>
                       <span className="dot absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-5"></span>
                     </label>
                   </td>

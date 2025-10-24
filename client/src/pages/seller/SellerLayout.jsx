@@ -41,11 +41,11 @@ const SellerLayout = () => {
             alt="logo"
           />
         </Link>
-        <div className="flex items-center gap-5 text-gray-500">
+        <div className="flex items-center gap-5 text-gray-700">
           <p>Hi! Admin</p>
           <button
             onClick={logout}
-            className="border rounded-full text-sm px-4 py-1"
+            className="bg-orange-500/70 hover:bg-orange-600/70 shadow-md transition-transform duration-200 cursor-pointer hover:scale-105 text-white rounded-full text-sm px-4 py-1"
           >
             Logout
           </button>

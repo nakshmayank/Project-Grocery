@@ -247,14 +247,14 @@ const Cart = () => {
               Change
             </button>
             {showAddress && (
-              <div className="absolute top-12 py-1 bg-white border border-gray-300 text-sm w-full">
+              <div className="rounded-md absolute top-12 py-1 bg-white border border-gray-300 text-sm w-full">
                 {addresses.map((address) => (
                   <p
                     onClick={() => {
                       setSelectedAddress(address);
                       setShowAddress(false);
                     }}
-                    className="text-gray-500 p-2 hover:bg-gray-100"
+                    className="text-gray-500 p-2 hover:bg-gray-100/80"
                   >
                     {address.street}, {address.city}, {address.state},{" "}
                     {address.country}
@@ -262,9 +262,9 @@ const Cart = () => {
                 ))}
                 <p
                   onClick={() => navigate("/add-address")}
-                  className="text-orange-500/70 text-center cursor-pointer p-2 hover:bg-orange-500/70/10"
+                  className="text-white bg-orange-500/70 hover:bg-orange-600/70 text-center cursor-pointer p-2"
                 >
-                  Add address
+                  Add new address
                 </p>
               </div>
             )}
@@ -313,7 +313,7 @@ const Cart = () => {
 
         <button
           onClick={placeOrder}
-          className="w-full py-3 mt-6 cursor-pointer bg-orange-500/70 text-white font-medium hover:bg-orange-600/90 transition rounded-lg"
+          className="w-full py-3 mt-6 cursor-pointer bg-orange-500/70 shadow-md text-white font-medium hover:bg-orange-600/80 transition rounded-lg"
         >
           {paymentOption === "COD" ? "Place Order" : "Proceed to Checkout"}
         </button>

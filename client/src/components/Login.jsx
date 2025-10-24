@@ -106,7 +106,7 @@ const Login = () => {
             </span>
           </p>
         )}
-        <button className="bg-orange-500/70 hover:bg-orange-600/80 transition-all text-white w-full py-2 rounded-md cursor-pointer">
+        <button className="bg-orange-500/70 shadow-md hover:bg-orange-600/70 transition-all text-white w-full py-2 rounded-md cursor-pointer">
           {state === "register" ? "Create Account" : "Login"}
         </button>
       </form>
