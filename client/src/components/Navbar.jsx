@@ -89,17 +89,33 @@ const Navbar = () => {
         {/* Center: Desktop Menu Links & Search */}
         <div className="hidden sm:flex items-center gap-8 text-lg">
           <NavLink
-            className="transition-transform duration-200 hover:scale-110 font-medium hover:font-semibold"
             to="/"
+            end
+            className={({ isActive }) =>
+              `transition-transform duration-200 hover:scale-110 font-medium ${
+                isActive
+                  ? "text-orange-500 border-b-1 border-black font-semibold"
+                  : "text-black hover:text-orange-500"
+              }`
+            }
           >
             Home
           </NavLink>
+
           <NavLink
-            className="transition-transform duration-200 hover:scale-110 font-medium hover:font-semibold"
             to="/products"
+            end
+            className={({ isActive }) =>
+              `transition-transform duration-200 hover:scale-110 font-medium ${
+                isActive
+                  ? "text-orange-500 border-b-1 border-black font-semibold"
+                  : "text-black hover:text-orange-500"
+              }`
+            }
           >
             Products
           </NavLink>
+
           <div className="hidden shadow-md lg:flex hover:bg-orange-300/10 hover:shadow-xl items-center text-sm gap-2 border-2 border-orange-600/90 hover:border-black/40 px-3 rounded-full">
             <input
               onChange={(e) => {
@@ -280,8 +296,12 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             className="flex gap-2 items-center justify-center"
           >
-            <img src={assets.wishlist_icon_outline} alt="order_icon" className="w-5" />
-              <p>Wishlist</p>
+            <img
+              src={assets.wishlist_icon_outline}
+              alt="order_icon"
+              className="w-5"
+            />
+            <p>Wishlist</p>
           </NavLink>
 
           <div className="mt-4 w-full">
